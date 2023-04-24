@@ -8,14 +8,16 @@
 #include <string.h>
 #include <stdarg.h>
 
+
 /**
  * struct format - matches the specifiers for printf
- * @fid: format identifiers for printf
+ *
+ * @format: format identifiers for printf
  * @fn: the pointer to function associated with printf
  */
 struct format
 {
-	char *fid;
+	char *format;
 	int (*fn)();
 };
 
