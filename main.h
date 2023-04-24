@@ -17,17 +17,20 @@
 struct format
 {
 	char *id;
-	int (*fn)();
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 /**
- * type_t - typedef for the struct format
+ * typedef struct format format_t - typedef for the struct format
  */
 
-typedef struct format type_t;
+typedef struct format format_t;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int _strlen(char *s);
+int handle_print(const char *format, int *i, va_list list, char buffer[], int flags, int width, int precision, int size);
 
+int print_char(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_string(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_percent(va_list types, char buffer[], int flags, int width, int precision, int size);
 #endif
