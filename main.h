@@ -24,7 +24,7 @@ struct format
  * type_t - typedef for the struct format
  */
 
-typedef strcut format type_t;
+typedef struct format type_t;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
