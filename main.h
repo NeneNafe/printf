@@ -8,6 +8,12 @@
 #include <string.h>
 #include <stdarg.h>
 
+/*FLAGS*/
+#define F_MINUS 1
+#define F_PLUS 2
+#define F_ZERO 4
+#define F_HASH 8
+#define F_SPACE 16
 /**
  * struct format - matches the specifiers for printf
  * @fid: format identifiers for printf
