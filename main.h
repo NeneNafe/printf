@@ -32,5 +32,6 @@ typedef struct format format_t;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int get_flags(const char *format, int *i);
 
 #endif
