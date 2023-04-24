@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i, count = 0;
+	int i, j, count = 0;
 	char *str, c;
 	va_list args;
 
@@ -26,8 +26,9 @@ int _printf(const char *format, ...)
 				break;
 				case 's':
 				str = va_arg(args, char *);
-				puts(str);
-				count += _strlen(str);
+				for (j = 0; str[j] != '\0'; j++)
+				_putchar(str[j]);
+				count++;
 				break;
 				case '%':
 				_putchar('%');
