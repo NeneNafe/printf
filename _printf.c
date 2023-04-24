@@ -1,61 +1,52 @@
 #include "main.h"
 
+void print_buffer(char buffer[], int *buff_ind);
+
 /**
  * _printf - produces output according to a format
- * @format: this is a character string
+ * @format: This is a character string
  * Return: The number of characters printed
  *
  * Description: _printf is a function that produces an output
  * according to a format. It then returns the number
  * of characters printed by excluding the null byte
- * used to end output to strings.
+ * used to end output to strings
  */
 
 int _printf(const char *format, ...)
 {
-	int j = 0, count = 0;
-	char *str, ch;
+	int count = 0;
+	char *s, c;
 	va_list ap;
 
 	va_start(ap, format);
+
 	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
 			format++;
-			switch (*format)
+			if (*format == 'c')
 			{
-				case 'c':
-			{
-				ch = (char) va_arg(ap, int);
-				_putchar(ch);
+				c = (char)va_arg(ap, int);
+				_putchar(c);
 				count++;
-				break;
 			}
-				case 's':
+			else if (*format == 's')
 			{
-				str = va_arg(ap, char *);
-
-				for (j = 0; str[j] != '\0'; j++)
+				s = va_arg(ap, char *);
+				while (*s != '\0')
 				{
-					_putchar(str[j]);
+					_putchar(*s);
+					s++;
+
 					count++;
 				}
-				break;
 			}
-				case '%':
+			else if (*format == '%')
 			{
 				_putchar('%');
 				count++;
-				break;
-			}
-				default:
-			{
-				_putchar('%');
-				_putchar(*format);
-				count += 2;
-				break;
-			}
 			}
 		}
 		else
@@ -65,8 +56,8 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+
 	va_end(ap);
+
 	return (count);
 }
-
-
