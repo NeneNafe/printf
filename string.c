@@ -16,7 +16,7 @@ int _string(va_list vl)
 	{
 		s = "(null)";
 		len = _strlen(s);
-		for (i = 0; 0 < len; i++)
+		for (i = 0; len < 0; i++)
 			_putchar(s[i]);
 		return (len);
 	}
