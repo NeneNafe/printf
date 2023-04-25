@@ -6,8 +6,6 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-#include <stddef.h>
-#include <string.h>
 
 /**
  * struct format - matches the conversion specifiers for printf
