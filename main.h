@@ -52,5 +52,6 @@ int _pointer(va_list vl);
 int _hex_aux(unsigned long int num);
 int _HEX_aux(unsigned int num);
 int _exclusive_string(va_list vl);
+int _flags(const char *fmt, int *i);
 
 #endif
