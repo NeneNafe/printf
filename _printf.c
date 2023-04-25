@@ -3,6 +3,10 @@
 /**
  * _printf - produces output according to a format
  * @format: the string that takes specifiers
+ *
+ * Description: Printf is a function in C programming that produces
+ * an output according to a format by excluding null byte
+ *
  * Return: the number of characters
  */
 
