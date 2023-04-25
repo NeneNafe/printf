@@ -24,7 +24,7 @@ int _printf(const char *format, ...);
 int _strlen(char *s);
 int _strlenc(const char *s);
 int _string(va_list v1);
-int _char(va_list v1);
+int _char(va_list vl);
 int _37(void);
 int _HEX(va_list v1);
 int _hex(va_list vl);
