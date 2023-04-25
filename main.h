@@ -21,11 +21,6 @@ typedef struct format
 	int (*f)();
 } fmt_t;
 
-/**
- * fmt_t - typedef of the struct format
- */
-typedef struct format fmt_t;
-
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _strlen(char *s);
