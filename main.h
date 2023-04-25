@@ -15,11 +15,11 @@
  * @f: function to pointer
  */
 
-struct format
+typedef struct format
 {
 	char *id;
 	int (*f)();
-};
+} fmt_t;
 
 /**
  * fmt_t - typedef of the struct format
