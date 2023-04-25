@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * __flags - Calculates active flags
+ * _flags - Calculates active flags
  * @fmt: Formatted string in which to print the arguments
- * @i: take a parameter.
- * Return: Flags:
+ * @i: take a parameter
+ *
+ * Return: Flags
  */
 int _flags(const char *fmt, int *i)
 {
